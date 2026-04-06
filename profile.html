@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rusty Shop - доставка по всей Москве</title>
+    <link href="./css/stylesMain.css" rel="stylesheet">
+    <link href="./css/stylesProfile.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="notifications-container" class="notifications-container"></div>
+    <header>
+        <h1><a href="./index.html">Rusty Shop</a></h1>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос">
+            <button>Найти</button>
+        </div>
+
+        <div class="header-icons">
+            <a href="./basket.html">Корзина</a>
+            <a href="./profile.html">Кабинет</a>
+        </div>
+    </header>
+
+    <div id="alert" class="hidden info">
+        <span id="alert-text"></span>
+        <button id="alert-ok">OK</button>
+    </div>
+
+    <main>
+        <h2>Мои заказы</h2>
+
+        <table class="orders-table">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Дата оформления</th>
+                    <th>Состав заказа</th>
+                    <th>Стоимость</th>
+                    <th>Время доставки</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody id="orders-list"></tbody>
+        </table>
+    </main>
+    <div id="modal" class="modal hidden"></div>
+    
+    <footer id="contacts">
+        <p>2026 Rusty Shop<br>
+            info@rustyshop.ru<br>
+            Позвонить нам <a href="tel:80000000000">+7-000-000-00-00</a></p>
+    </footer>
+
+    
+    <script type="module" src="./js/orders.js"></script>
+</body>
+
+</html>

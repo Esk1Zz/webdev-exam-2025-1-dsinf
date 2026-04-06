@@ -1,0 +1,195 @@
+.order-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: flex-start;
+}
+
+
+.order-review-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.order-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.order-summary {
+    grid-column: 1 / -1;
+    margin-right: 20px;
+}
+
+.order-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+.itog {
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.order-total {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.order-section {
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 1000px;
+}
+
+.order-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 22px;
+    color: #111;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.order-block,
+.client-block {
+    flex: 1 1 45%;
+    min-width: 320px;
+}
+
+fieldset {
+    border: 1px solid #000;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 8px;
+    font-size: 1.2rem;
+}
+
+.order-block label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.order-block p {
+    margin-left: 0;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+select,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+textarea {
+    resize: vertical;
+    height: 200px;
+}
+
+.total-price {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    grid-column: 1 / -1;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+    
+}
+
+
+fieldset.delivery-time label {
+    display: block;
+    margin: 5px 0;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 100%;
+    grid-column: 1 / -1;
+    margin-bottom: 25px;
+}
+
+#delivery_date {
+    box-sizing: border-box;
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.search {
+    visibility: hidden;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+
+.uscontacts {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+@media (max-width: 800px) {
+    .order-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .order-list {
+        grid-template-columns: 1fr;
+    }
+}

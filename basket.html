@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rusty Shop - доставка по всей Москве</title>
+    <link href="./css/stylesMain.css" rel="stylesheet">
+    <link href="./css/stylesBasket.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1><a href="./index.html">Rusty Shop</a></h1>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос">
+            <button>Найти</button>
+        </div>
+
+        <div class="header-icons">
+            <a href="./basket.html">Корзина</a>
+            <a href="./profile.html">Кабинет</a>
+        </div>
+    </header>
+
+    <div id="notifications-container" class="notifications-container"></div>
+
+    <main>
+        <div class="container2">
+            <section class="order-review">
+                <h2>Выбранные товары</h2>
+                <div class="order-review-grid">
+                    <div class="order-list">
+                    </div>
+                    <p class="order-note">Добавить товары можно на <a href="./index.html">Главной странице</a></p>
+
+                </div>
+            </section>
+
+            <section class="order-form-section">
+                <h2>Оформление заказа</h2>
+                <form action="https://httpbin.org/post" method="post" id="orderForm">
+                    <fieldset class="order-block">
+                        <legend>Ваш заказ</legend>
+                        <div class="container">
+                            <label for="comment">Комментарий к заказу:</label>
+                            <textarea name="comment" id="comment" rows="4"></textarea>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="client-block">
+                        <legend>Ваши данные</legend>
+
+                        <label for="name">Имя:</label>
+                        <input class="uscontacts" type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input class="uscontacts" type="email" id="email" name="email" required>
+
+                        <label>
+                            <input type="checkbox" name="subscribe" value="yes">
+                            Согласен получать информацию о новинках и акциях
+                        </label>
+
+                        <label for="phone">Телефон:</label>
+                        <input class="uscontacts" type="tel" id="phone" name="phone" required>
+
+                        <label for="address">Адрес доставки:</label>
+                        <input class="uscontacts" type="text" id="address" name="address" required>
+
+                        <div class="form-group">
+                            <label>Дата доставки:</label>
+                            <input type="date" name="delivery_date" id="delivery_date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Интервал доставки:</label>
+                            <select name="delivery_interval" id="delivery_interval" required>
+                                <option value="08:00-12:00">08:00-12:00</option>
+                                <option value="12:00-14:00">12:00-14:00</option>
+                                <option value="14:00-18:00">14:00-18:00</option>
+                                <option value="18:00-22:00">18:00-22:00</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <div class="order-summary">
+                        <h3 class="itog">Итог</h3>
+                        <div class="order-total">0₽</div>
+
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit">Отправить заказ</button>
+                    </div>
+
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer id="contacts">
+        <p>2026 Rusty Shop<br>
+            info@rustyshop.ru<br>
+            Позвонить нам <a href="tel:80000000000">+7-000-000-00-00</a></p>
+    </footer>
+    <script type="module" src="./js/basket.js"></script>
+</body>
+
+</html>

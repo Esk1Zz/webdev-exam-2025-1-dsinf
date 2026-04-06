@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rusty Shop - доставка по всей Москве</title>
+    <link href="./css/stylesMain.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="notifications-container" class="notifications-container"></div>
+    <header>
+        <h1><a href="./index.html">Rusty Shop</a></h1>
+        <div class="search">
+            <div class="search-wrapper">
+                <input type="text" placeholder="Введите запрос">
+                <span class="clear-search" id="clearSearch">Сбросить</span>
+            </div>
+            <button>Найти</button>
+        </div>
+
+        <div class="header-icons">
+            <a href="./basket.html">Корзина</a>
+            <a href="./profile.html">Кабинет</a>
+        </div>
+    </header>
+
+    <div id="alert"></div>
+
+    <main>
+        <div class="container2">
+            <div class="catalog-header">
+                <h2>Каталог</h2>
+                <select class="optionFilter">
+                    <option>По имени</option>
+                    <option>По убыванию рейтинга</option>
+                    <option>По возрастанию рейтинга</option>
+                    <option>По убыванию цены</option>
+                    <option>По возрастанию цены</option>
+                </select>
+            </div>
+        </div>
+        <div class="container">
+
+            <aside class="sidebar">
+                <h3>Фильтры</h3>
+                <form id="filter-form">
+                    <div class="filter-group">
+                        <h4>Категории</h4>
+                        <label><input type="checkbox" name="category" value="home & kitchen"> Дом и кухня</label>
+                        <label><input type="checkbox" name="category" value="tv, audio & cameras"> Электроника</label>
+                        <label><input type="checkbox" name="category" value="sports & fitness"> Спорт</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>
+                            <input type="checkbox" name="discount"> Только со скидкой
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Цена</h4>
+                        <div class="price-inputs">
+                            <input type="number" name="min_price" placeholder="От">
+                            <input type="number" name="max_price" placeholder="До">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-apply">Применить фильтры</button>
+                </form>
+            </aside>
+            <section class="catalog">
+                <div class="catalog-grid" id="catalogGrid">
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer id="contacts">
+        <p>2026 Rusty Shop<br>
+            info@rustyshop.ru<br>
+            Позвонить нам <a href="tel:80000000000">+7-000-000-00-00</a></p>
+    </footer>
+    <script type="module" src="./js/renderCatalog.js"></script>
+</body>
+
+</html>
